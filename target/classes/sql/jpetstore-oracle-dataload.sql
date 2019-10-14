@@ -99,3 +99,8 @@ INSERT INTO inventory (itemid, qty ) VALUES ('EST-25',10000);
 INSERT INTO inventory (itemid, qty ) VALUES ('EST-26',10000);
 INSERT INTO inventory (itemid, qty ) VALUES ('EST-27',10000);
 INSERT INTO inventory (itemid, qty ) VALUES ('EST-28',10000);
+
+INSERT INTO category VALUES ('GUITAR','기타','<image src="../images/fish_icon.gif"><font size="5" color="blue"> Fish</font>');
+INSERT INTO category VALUES ('PIANO','피아노','<image src="../images/dogs_icon.gif"><font size="5" color="blue"> Dogs</font>');
+INSERT INTO category VALUES ('OCARINA','오카리나','<image src="../images/reptiles_icon.gif"><font size="5" color="blue"> Reptiles</font>');
+INSERT INTO category VALUES ('VIOLIN','바이올린','<image src="../images/cats_icon.gif"><font size="5" color="blue"> Cats</font>');
