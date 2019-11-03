@@ -100,7 +100,37 @@ INSERT INTO inventory (itemid, qty ) VALUES ('EST-26',10000);
 INSERT INTO inventory (itemid, qty ) VALUES ('EST-27',10000);
 INSERT INTO inventory (itemid, qty ) VALUES ('EST-28',10000);
 
+delete from  CATEGORY;   
 INSERT INTO category VALUES ('GUITAR','기타','<image src="../images/fish_icon.gif"><font size="5" color="blue"> Fish</font>');
 INSERT INTO category VALUES ('PIANO','피아노','<image src="../images/dogs_icon.gif"><font size="5" color="blue"> Dogs</font>');
 INSERT INTO category VALUES ('OCARINA','오카리나','<image src="../images/reptiles_icon.gif"><font size="5" color="blue"> Reptiles</font>');
 INSERT INTO category VALUES ('VIOLIN','바이올린','<image src="../images/cats_icon.gif"><font size="5" color="blue"> Cats</font>');
+commit;
+
+delete from  CATEGORY;   
+INSERT INTO category VALUES ('SPORTSWEAR','스포츠웨어','<image src="../images/fish_icon.gif"><font size="5" color="blue"> Fish</font>');
+INSERT INTO category VALUES ('MENS','남성','<image src="../images/dogs_icon.gif"><font size="5" color="blue"> Dogs</font>');
+INSERT INTO category VALUES ('WOMENS','여성','<image src="../images/reptiles_icon.gif"><font size="5" color="blue"> Reptiles</font>');
+INSERT INTO category VALUES ('KIDS','아동','<image src="../images/cats_icon.gif"><font size="5" color="blue"> Cats</font>');
+commit;
+
+delete from  supplier; 
+INSERT INTO supplier VALUES (1,'NIKE','AC','600 Avon Way','','Los Angeles','CA','94024','212-947-0797');
+INSERT INTO supplier VALUES (2,'Adidas','AC','700 Abalone Way','','San Francisco ','CA','94024','415-947-0797');
+INSERT INTO supplier VALUES (3,'Puma','AC','600 Avon Way','','Los Angeles','CA','94024','212-947-0797');
+INSERT INTO supplier VALUES (4,'ASICS','AC','700 Abalone Way','','San Francisco ','CA','94024','415-947-0797');
+commit;
+
+delete from  product;
+INSERT INTO product VALUES ('SW-01','SPORTSWEAR','반스 체크셔츠','<image src="../images/fish1.jpg">Salt Water fish from Australia');
+INSERT INTO product VALUES ('SW-02','SPORTSWEAR','코튼 쟈켓','<image src="../images/fish4.gif">Salt Water fish from Australia');
+INSERT INTO product VALUES ('SW-03','SPORTSWEAR', '로이트 후드빈','<image src="../images/fish3.gif">Fresh Water fish from Japan');
+INSERT INTO product VALUES ('SW-04','SPORTSWEAR', '골드 드라슈','<image src="../images/fish2.gif">Fresh Water fish from China');
+commit;
+
+delete from  item; 
+INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-1','SW-01',35000,10.00,1,'p','Large');
+INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-2','SW-02',40000,10.00,2,'P','Small');
+INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-3','SW-03',50000,12.00,3,'P','Toothless');
+INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-4','SW-04',45000,12.00,4,'P','Spotted');
+commit;

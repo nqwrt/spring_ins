@@ -38,5 +38,9 @@ public class CatalogServiceImpl implements CatalogService {
     public Category getCategory(String categoryId) {
     	return categoryRepository.getCategory(categoryId);
     }
-   
+
+	@Override
+	public List<String> getSupplierListByCategory(String categoryId) {
+		return categoryRepository.getSupplierListByCategory(categoryId);
+	}
 }

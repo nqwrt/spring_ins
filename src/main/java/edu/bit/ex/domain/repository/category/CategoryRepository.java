@@ -9,4 +9,6 @@ public interface CategoryRepository {
 
     Category getCategory(String categoryId);
 
+    List<String> getSupplierListByCategory(String categoryId);
+
 }

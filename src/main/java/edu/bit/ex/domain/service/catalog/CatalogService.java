@@ -9,4 +9,6 @@ public interface CatalogService {
 	List<Category> getCategoryList();
 
     Category getCategory(String categoryId);
+    
+    List<String> getSupplierListByCategory(String categoryId);
 }

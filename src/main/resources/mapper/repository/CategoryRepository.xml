@@ -4,9 +4,7 @@
 
 <mapper namespace="edu.bit.ex.domain.repository.category.CategoryRepository">
 
-  <cache />
-  
-  <select id="getCategory" parameterType="string" resultType="edu.bit.ex.domain.model.Category">
+  <select id="getCategory" parameterType="string" resultType="Category">
     SELECT
       CATID AS categoryId,
       NAME,
@@ -15,12 +13,21 @@
     WHERE CATID = #{categoryId}
   </select>
 
-  <select id="getCategoryList" resultType="edu.bit.ex.domain.model.Category">
+  <select id="getCategoryList" resultType="Category">
     SELECT
       CATID AS categoryId,
       NAME,
       DESCN AS description
     FROM CATEGORY
   </select>
+ 
+  <select id="getSupplierListByCategory" parameterType="string" resultType="string">
+   <![CDATA[
+		select supplier.NAME
+		from supplier , (select * from item where productid in (select productid from product where category = #{categoryId})) i 
+		where i.supplier = supplier.suppid
+	]]>
+  </select>
+  
 
 </mapper>
