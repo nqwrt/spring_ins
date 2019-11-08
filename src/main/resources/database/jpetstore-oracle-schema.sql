@@ -18,6 +18,7 @@ drop table account;
 drop table category;
 drop table supplier;
 drop table sequence;
+drop table image;
 
 create table supplier (
     suppid int not null,

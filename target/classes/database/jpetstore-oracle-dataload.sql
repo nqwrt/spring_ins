@@ -122,10 +122,12 @@ INSERT INTO supplier VALUES (4,'ASICS','AC','700 Abalone Way','','San Francisco 
 commit;
 
 delete from  product;
-INSERT INTO product VALUES ('SW-01','SPORTSWEAR','반스 체크셔츠','<image src="../images/fish1.jpg">Salt Water fish from Australia');
-INSERT INTO product VALUES ('SW-02','SPORTSWEAR','코튼 쟈켓','<image src="../images/fish4.gif">Salt Water fish from Australia');
-INSERT INTO product VALUES ('SW-03','SPORTSWEAR', '로이트 후드빈','<image src="../images/fish3.gif">Fresh Water fish from Japan');
-INSERT INTO product VALUES ('SW-04','SPORTSWEAR', '골드 드라슈','<image src="../images/fish2.gif">Fresh Water fish from China');
+INSERT INTO product VALUES ('SW-01','SPORTSWEAR','반스 체크셔츠','가자 캘리포니아 로~~');
+INSERT INTO product VALUES ('SW-02','SPORTSWEAR','코튼 쟈켓','당신의 선택은 언제나 현명함..');
+INSERT INTO product VALUES ('SW-03','SPORTSWEAR', '로이트 후드빈','입으면 바로 꿀잠');
+INSERT INTO product VALUES ('SW-04','SPORTSWEAR', '골드 드라슈','넘사벽 당신의 최고의 선택');
+INSERT INTO product VALUES ('SW-05','SPORTSWEAR', '로이트 후드빈','100년 전의 신사');
+INSERT INTO product VALUES ('SW-06','SPORTSWEAR', '골드 드라슈','남성 최고의 패션');
 commit;
 
 delete from  item; 
@@ -133,4 +135,14 @@ INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr
 INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-2','SW-02',40000,10.00,2,'P','Small');
 INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-3','SW-03',50000,12.00,3,'P','Toothless');
 INSERT INTO item (itemid, productid, listprice, unitcost, supplier, status, attr1) VALUES ('EST-4','SW-04',45000,12.00,4,'P','Spotted');
+commit;
+
+--CREATE SEQUENCE seq_image START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 99999999;
+delete from  image;
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
+
 commit;
