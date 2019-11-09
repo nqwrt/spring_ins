@@ -16,6 +16,7 @@
 
 package edu.bit.ex.domain.model;
 
+import java.util.List;
 
 public class Product  {
 
@@ -24,7 +25,17 @@ public class Product  {
     private String name;
     private String description;
     
-    public String getProductId() {
+    private List<Image> listImage;
+    
+    public List<Image> getListImage() {
+		return listImage;
+	}
+
+	public void setListImage(List<Image> listImage) {
+		this.listImage = listImage;
+	}
+
+	public String getProductId() {
         return productId;
     }
 

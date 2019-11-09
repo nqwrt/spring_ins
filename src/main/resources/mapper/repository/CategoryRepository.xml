@@ -29,5 +29,43 @@
 	]]>
   </select>
   
+   <resultMap type="Image" id="Image">
+	   <result column="imageid" property="imageId"/>
+	   <result column="link" property="link"/>
+   </resultMap>
+  
+	<resultMap type="Item" id="Item">
+		<result column="ITEMID" property="itemId"/>
+		<result column="LISTPRICE" property="listPrice"/>
+		<association javaType="Product" property="product">
+			<id column="PRODUCTID" property="productId"/>
+			<result column="productid" property="productId"/>
+  			<result column="name" property="name"/>
+  			<collection property="listImage" resultMap="Image"/>
+		</association>  	
+	</resultMap>
+  	
+<!-- 	<resultMap type="Product" id="Prouct">
+  		<result column="productid" property="productId"/>
+  		<result column="name" property="name"/>
+  		<collection property="listImage" resultMap="Image"/>
+	</resultMap> -->
+  
+<!--   <select id="getMainProduct" resultMap="Product">
+   <![CDATA[
+		select p.productid, p.name, i.imageid, i.link 
+		from product p 
+		left join image i
+		on i.PRODUCTID = p.PRODUCTID 
+	]]>
+  </select>  -->
+  
+   <select id="getMainItems" resultMap="Item">
+   <![CDATA[
+		select *         
+		from (select * from ITEM where rownum <=6 order by dbms_random.value) item , product , image
+		where item.PRODUCTID = product.PRODUCTID and product.PRODUCTID = image.PRODUCTID
+	]]>
+  </select>
 
 </mapper>

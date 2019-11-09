@@ -140,9 +140,9 @@ commit;
 --CREATE SEQUENCE seq_image START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 99999999;
 delete from  image;
 INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
-INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
-INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
-INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
-INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-01','images/cloth/sportswear/sw-01.jpg' );
-
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-02','images/cloth/sportswear/sw-02.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-03','images/cloth/sportswear/sw-03.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-04','images/cloth/sportswear/sw-04.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-05','images/cloth/sportswear/sw-05.jpg' );
+INSERT INTO image (imageid, productid,link) vALUES (seq_image.NEXTVAL,'SW-06','images/cloth/sportswear/sw-06.jpg' );
 commit;

@@ -127,7 +127,7 @@ create table orderstatus (
 );
 
 grant all on orderstatus to public;
-create sequence linenum increment by 1 cache 10000;
+create sequence increment by 1 cache 10000;
 
 create table category (
 	catid varchar(10) not null,

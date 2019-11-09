@@ -11,6 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.bit.ex.domain.model.Category;
+import edu.bit.ex.domain.model.Image;
+import edu.bit.ex.domain.model.Item;
+import edu.bit.ex.domain.model.Product;
 import edu.bit.ex.domain.service.catalog.CatalogService;
 
 @Controller
@@ -35,8 +38,16 @@ public class CatalogController {
     	}
     	
     	System.out.println(categoryMap);    	
-    	model.addAttribute("categoryMap", categoryMap);            
-        
-        return "catalog/Main";
+    	model.addAttribute("categoryMap", categoryMap);
+    	
+    	List<Item> items =  catalogService.getMainItems();
+    	
+    	for(Item item : items) {    	
+    		System.out.println(item);	    	
+    	}
+    	
+    	model.addAttribute("items", items);
+    	
+    	return "catalog/Main";
     }
 }
