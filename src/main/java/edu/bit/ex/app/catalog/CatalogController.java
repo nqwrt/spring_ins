@@ -8,12 +8,11 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.bit.ex.domain.model.Category;
-import edu.bit.ex.domain.model.Image;
 import edu.bit.ex.domain.model.Item;
-import edu.bit.ex.domain.model.Product;
 import edu.bit.ex.domain.service.catalog.CatalogService;
 
 @Controller
@@ -22,6 +21,13 @@ public class CatalogController {
 	
     @Inject
     protected CatalogService catalogService;
+    
+    @RequestMapping("/product-details/{itemId}")
+    public String productDatails(@PathVariable("itemId") String itemId ) {
+    	
+    	System.out.println(itemId);
+    	return "catalog/product-details";
+    }
 
     @RequestMapping  
     public String main(Model model) {
@@ -50,4 +56,6 @@ public class CatalogController {
     	
     	return "catalog/Main";
     }
+    
+    
 }
